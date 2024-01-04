@@ -1,0 +1,24 @@
+# Name: Right
+# Description: Status on the right.
+
+ZSH_GIT_PROMPT_SHOW_REMOTE="symbol"
+ZSH_PIJUL_PROMPT_FORCE_BLANK=1
+
+ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg_bold[default]%}≺ "
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
+ZSH_THEME_GIT_PROMPT_SEPARATOR=" "
+ZSH_THEME_GIT_PROMPT_CHANNEL="%{$fg_no_bold[grey]%}"
+ZSH_THEME_GIT_PROMPT_REMOTE_SYMBOL="%{$fg_bold[yellow]%}⟳ "
+ZSH_THEME_GIT_PROMPT_REMOTE_PREFIX="%{$fg[red]%}(%{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_REMOTE_SUFFIX="%{$fg[red]%})"
+ZSH_THEME_PIJUL_PROMPT_CHANGED="%{$fg[blue]%}∆"
+ZSH_THEME_PIJUL_PROMPT_ADDED="%{$fg[green]%}+"
+ZSH_THEME_PIJUL_PROMPT_REMOVED="%{$fg[red]%}−"
+ZSH_THEME_PIJUL_PROMPT_RESURRECTED="✝"
+ZSH_THEME_PIJUL_PROMPT_SOLVED="%{$fg[magenta]%}⛙"
+ZSH_THEME_PIJUL_PROMPT_UNSOLVED="%{$fg[yellow]%}×"
+ZSH_THEME_PIJUL_PROMPT_UNTRACKED="…"
+ZSH_THEME_PIJUL_PROMPT_CLEAN="%{$fg_bold[green]%}✔"
+
+PROMPT='%B%~%b %F{blue}≻≻≻%f '
+RPROMPT='$(pijul_prompt)'
