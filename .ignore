@@ -1,0 +1,8 @@
+# macOS folder metadata
+.DS_Store
+
+# Git
+.git
+
+# Pijul debug output
+debug.*
