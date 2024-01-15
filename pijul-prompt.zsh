@@ -119,8 +119,11 @@ function _zsh_pijul_prompt_pijul_status() {
   local channel
   channel=$(_zsh_pijul_prompt_pijul_channel_cmd | sed -n 's/^\* //p')
 
+  # Until it's possible to retrieve the default remote, take the first listed.
+  # This will not necessarily be the default remote, but rather the first remote
+  # added to the repository.
   local remote
-  remote=$(_zsh_pijul_prompt_pijul_remote_cmd | sed -En 's/^.*: (.*@)?//p')
+  remote=$(_zsh_pijul_prompt_pijul_remote_cmd | sed -En 's/^.*: (.*@)?//p' | head -n 1)
 
   _zsh_pijul_prompt_pijul_status_cmd | $ZSH_PIJUL_PROMPT_AWK_CMD \
     -v PREFIX="$ZSH_THEME_PIJUL_PROMPT_PREFIX" \
