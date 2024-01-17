@@ -143,7 +143,7 @@ function _zsh_pijul_prompt_pijul_status() {
     -v RESURRECTED="$ZSH_THEME_PIJUL_PROMPT_RESURRECTED" \
     -v UNTRACKED="$ZSH_THEME_PIJUL_PROMPT_UNTRACKED" \
     -v CLEAN="$ZSH_THEME_PIJUL_PROMPT_CLEAN" \
-    -v RC="%{$reset_color%}" \
+    -v RC="%{$reset_color%}%b%f%k" \
     -v channel="$channel" \
     -v remote="$remote" \
     '
@@ -278,7 +278,7 @@ function _zsh_pijul_prompt_pijul_status_secondary() {
     -v TAGS_PREFIX="$ZSH_THEME_PIJUL_PROMPT_TAGS_PREFIX" \
     -v TAGS_SUFFIX="$ZSH_THEME_PIJUL_PROMPT_TAGS_SUFFIX" \
     -v TAG="$ZSH_THEME_PIJUL_PROMPT_TAG" \
-    -v RC="%{$reset_color%}" \
+    -v RC="%{$reset_color%}%b%f%k" \
     -v state="$state" \
     '
       BEGIN {
