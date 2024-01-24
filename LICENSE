@@ -1,7 +1,9 @@
 MIT License
 
+Copyright © 2024 Ryan Booker
+
+Originally forked (and heavily modified) from git-prompt.zsh
 Copyright © 2023 Wolfgang Popp
-pijul-prompt.zsh changes Copyright © 2024 Ryan Booker
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the "Software"),
