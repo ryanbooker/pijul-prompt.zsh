@@ -482,13 +482,13 @@ if (( $+commands[pijul] )); then
   if [[ -z "$ZSH_PIJUL_PROMPT_NO_ASYNC" ]]; then
     # Use the async prompt
     autoload -Uz add-zsh-hook \
-      && add-zsh-hook precmd __pijul_channel_precmd_hook \
       && add-zsh-hook precmd __pijul_remote_precmd_hook \
       && add-zsh-hook precmd __pijul_status_precmd_hook \
       && add-zsh-hook precmd __pijul_secondary_precmd_hook \
       && add-zsh-hook chpwd __pijul_chpwd_hook \
 
     function pijul_prompt() {
+      __PIJUL_CHANNEL=$(__pijul_channel)
       __pijul_prompt
     }
 
@@ -498,14 +498,14 @@ if (( $+commands[pijul] )); then
   else
     # Use the sync prompt
     function pijul_prompt() {
-      __pijul_channel | __pijul_channel_completion
-      __pijul_remote | __pijul_remote_completion
-      __pijul_status | __pijul_status_completion
+      __PIJUL_CHANNEL=$(__pijul_channel)
+      __PIJUL_REMOTE=$(__pijul_remote)
+      __PIJUL_STATUS=$(__pijul_status)
       __pijul_prompt
     }
 
     function pijul_prompt_secondary() {
-      __pijul_secondary | __pijul_secondary_completion
+      __PIJUL_SECONDARY=$(__pijul_secondary)
       __pijul_prompt_secondary
     }
   fi
