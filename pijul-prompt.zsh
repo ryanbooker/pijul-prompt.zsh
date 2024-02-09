@@ -371,7 +371,7 @@ function __pijul_chpwd_hook() {
 
 # ASYNC ------------------------------------------------------------------------
 
-typeset -A __fds __pids __completions
+typeset -Ag __fds __pids __completions
 
 function __async() {
   if [[ -z $1 || -z $2 ]]; then
